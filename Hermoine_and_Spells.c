@@ -1,12 +1,12 @@
 #include<stdio.h>
-int ss(int a,int b,int c);
+void ss(int a,int b,int c);
 int main()
 {
     int a,b,c;
     scanf("%d%d%d",&a,&b,&c);
-    int x=ss(a,b,c);
+    ss(a,b,c);
 }
-int ss(int a,int b,int c)
+void ss(int a,int b,int c)
 {
     if(a>c && b>c)
     {
