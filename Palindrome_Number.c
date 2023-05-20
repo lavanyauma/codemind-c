@@ -1,28 +1,46 @@
 #include<stdio.h>
+int isitpal(int n)
+{
+    int temp=0,d,r=0;
+    temp=n;
+    while(n)
+    {
+        d=n%10;
+        r=r*10+d;
+        n=n/10;
+    }
+    n=temp;
+    if(n==r)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
 int main()
 {
-    int n,q,i;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int a[100],i,k;
+    scanf("%d",&k);
+    for(i=0;i<k;i++)
     {
-        int m,t,r,s=0;
-        scanf("%d",&m);
-        t=m;
-        while(t!=0)
-        {
-            r=t%10;
-            s=s*10+r;
-            t=t/10;
-        }
-        if(s==m)
-        {
-            printf("True
-");
-        }
-        else 
-        {
-            printf("False
-");
-        }
+        scanf("%d",&a[i]);
     }
+for(i=0;i<k;i++)
+{
+    if(isitpal(a[i]))
+    {
+        printf("True");
+        printf("
+");
+    }
+    else
+    {
+        printf("False");
+        printf("
+");
+    }
+    
+}
 }
